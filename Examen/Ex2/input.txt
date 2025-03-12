@@ -1,0 +1,20 @@
+Sigma:
+1
+0
+End
+
+Gamma:
+#
+$
+End
+
+States:
+q1 ,                S         ,       F
+q2
+q3 , F
+End
+
+Transitions:
+(q1,1,#) > (q2,#,$)
+(q2,0,$) > (q3,$,#)
+End

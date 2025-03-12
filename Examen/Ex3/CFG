@@ -1,0 +1,42 @@
+Terminals:
+go
+look
+inventory
+take
+drop
+Entrance_Hall
+Dining_Room
+Kitchen
+Pantry
+Armoury
+Throne_Room
+Wizards_Study
+Secret_Exit
+Treasury
+Library
+key
+invitation
+chefs_hat
+spoon
+sword
+crown
+ancient_coin
+spell_book
+magic_wand
+End
+
+Variables:
+<commands>
+<room_name>
+<item_name>
+End
+
+Rules:
+<commands> -> go <room_name> | look | inventory | take <item_name> | drop <item_name>
+<room_name> -> Entrance_Hall | Dining_Room | Kitchen | Pantry | Armoury | Throne_Room | Wizards_Study | Secret_Exit | Treasury | Library
+<item_name> -> key | invitation | chefs_hat | spoon | sword | crown | ancient_coin | spell_book | magic_wand
+End
+
+Start:
+<commands>
+End

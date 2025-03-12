@@ -1,0 +1,92 @@
+Sigma:
+go Entrance_Hall
+go Dining_Room
+go Kitchen
+go Pantry
+go Armoury
+go Throne_Room
+go Wizards_Study
+go Secret_Exit
+go Treasury
+go Library
+take key
+take invitation
+take chefs_hat
+take spoon
+take sword
+take crown
+take ancient_coin
+take spell_book
+take magic_wand
+drop key
+drop invitation
+drop chefs_hat
+drop spoon
+drop sword
+drop crown
+drop ancient_coin
+drop spell_book
+drop magic_wand
+look
+inventory
+End
+
+Gamma:
+#
+key
+invitation
+chefs_hat
+spoon
+sword
+crown
+ancient_coin
+spell_book
+magic_wand
+End
+
+States:
+Entrance_Hall,S
+Dining_Room
+Kitchen
+Pantry
+Armoury
+Throne_Room
+Wizards_Study
+Secret_Exit,F
+Treasury
+Library
+End
+
+Transitions:
+(Entrance_Hall,take key,key) > (Entrance_Hall,#,key)
+(Dining_Room,take invitation,invitation) > (Dining_Room,#,invitation)
+(Dining_Room,take chefs_hat ,chefs_hat ) > (Dining_Room,#,chefs_hat )
+(Kitchen,take spoon,spoon) > (Kitchen,#,spoon)
+(Armoury,take sword,sword) > (Armoury,#,sword)
+(Armoury,take crown,crown) > (Armoury,#,crown)
+(Treasury,take ancient_coin,ancient_coin) > (Treasury,#,ancient_coin)
+(Library,take spell_book,spell_book) > (Library,#,spell_book)
+(Wizards_Study,take magic_wand,magic_wand) > (Wizards_Study,#,magic_wand)
+(Entrance_Hall, go Armoury, key) > (Armoury, #, #)
+(Entrance_Hall, go Dining_Room, #) > (Dining_Room, #, #)
+(Dining_Room, go Entrance_Hall, invitation) > (Entrance_Hall, #, #)
+(Dining_Room, go Kitchen, chefs_hat) > (Kitchen, #, #)
+(Dining_Room, go Treasury, sword) > (Treasury, #, #)
+(Armoury, go Entrance_Hall, invitation) > (Entrance_Hall, #, #)
+(Armoury, go Throne_Room, crown) > (Throne_Room, #, #)
+(Armoury, go Treasury,sword) > (Treasury,#,#)
+(Kitchen, go Pantry, spoon) > (Pantry, #, #
+(Kitchen, go Dining_Room, #) > (Dining_Room, #, #)
+(Pantry, go Kitchen, chefs_hat) > (Kitchen, #, #)
+(Treasury, go Dining_Room, #) > (Dining_Room, #, #)
+(Treasury, go Armoury, key) > (Armoury, #, #)
+(Treasury, go Library, ancient_coin) > (Library, #, #)
+(Treasury, go Wizards_Study, spell_book > (Wizards_Study, #, #)
+(Throne_Room, go Armoury, key) > (Armoury, #, #)
+(Throne_Room, go Wizards_Study, spell_book) > (Wizards_Study, #, #)
+(Library, go Treasury, sword) > (Treasury, #, #)
+(Library, go Secret_Exit, magic_wand) > (Secret_Exit, #, #)
+(Wizards_Study, go Treasury, sword) > (Treasury, #, #)
+(Wizards_Study, go Throne_Room, crown) > (Throne_Room, #, #)
+(Wizards_Study, go Secret_Exit, magic_wand) > (Secret_Exit, #, #)
+End
